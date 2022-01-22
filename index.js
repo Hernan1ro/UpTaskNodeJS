@@ -17,6 +17,7 @@ app.set("views", path.join(__dirname, "./views"));
 
 // Habilitar bodyParser para leer datos del formulario
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use("/", routes());
 
 app.listen(3000);
