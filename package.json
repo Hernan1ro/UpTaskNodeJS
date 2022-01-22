@@ -1,0 +1,24 @@
+{
+  "name": "uptasknodejs",
+  "version": "1.0.0",
+  "description": "Project made with Node and MVC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hernan1ro/UpTaskNodeJS.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "MVC"
+  ],
+  "author": "Hernán Mercado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hernan1ro/UpTaskNodeJS/issues"
+  },
+  "homepage": "https://github.com/Hernan1ro/UpTaskNodeJS#readme"
+}
