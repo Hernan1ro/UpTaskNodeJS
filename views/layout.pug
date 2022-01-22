@@ -4,8 +4,27 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet" href="../public/css/app.css")
-    link(rel="stylesheet" href="../public/css/normalize.css")
-    title Uptask
+    link(rel="stylesheet" href="./css/app.css")
+    link(rel="stylesheet" href="./css/normalize.css")
+    title= nombrePagina
   body 
-    block contenido
+    header.barra 
+      h1 UpTask - Administrador de proyectos
+      a(href="#") Cerrar Sesión
+
+    main.contenedor
+      aside.contenedor-proyectos
+        .panel.crear-proyecto
+          a(href="#" class="boton") Nuevo Proyecto
+            span +
+        .panel.lista-proyectos
+          h2 Proyectos
+          ul#proyectos.proyectos
+            li
+              a(href="#" class="") Diseño de Tienda Virtual
+            li
+              a(href="#" class="") Diseño de Portafolio personal
+            li
+              a(href="#" class="") Diseño de Aplicación de gestión de plata
+          
+      block contenido
