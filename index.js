@@ -1,4 +1,5 @@
 const express = require("express");
+const routes = require("./routes");
 
 // Instanciar la aplicación
 
@@ -9,9 +10,6 @@ const productos = [
   { producto: "Computadora", precio: 10000 },
 ];
 
-//  Ruta para el home
-app.use("/", (req, res, next) => {
-  res.json(productos);
-});
+app.use("/", routes());
 
 app.listen(3000);
