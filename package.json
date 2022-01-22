@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/Hernan1ro/UpTaskNodeJS/issues"
   },
-  "homepage": "https://github.com/Hernan1ro/UpTaskNodeJS#readme"
+  "homepage": "https://github.com/Hernan1ro/UpTaskNodeJS#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
