@@ -21,11 +21,8 @@ html(lang="en")
         .panel.lista-proyectos
           h2 Proyectos
           ul#proyectos.proyectos
-            li
-              a(href="#" class="") Diseño de Tienda Virtual
-            li
-              a(href="#" class="") Diseño de Portafolio personal
-            li
-              a(href="#" class="") Diseño de Aplicación de gestión de plata
+            each proyecto in proyectos
+              li
+                a(href="#")=proyecto.nombre
           
       block contenido
