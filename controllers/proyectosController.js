@@ -1,3 +1,5 @@
+const Proyectos = require("../models/Proyectos.js");
+
 exports.proyectosHome = (req, res) => {
   res.render("index", {
     nombrePagina: "Proyectos",
@@ -28,5 +30,10 @@ exports.nuevoProyecto = (req, res) => {
   } else {
     //No hay errores
     //Insertar en la BD
+    Proyectos.create({ nombre })
+      .then(() => {
+        console.log("Insertado correctamente");
+      })
+      .catch((err) => console.log(err));
   }
 };
