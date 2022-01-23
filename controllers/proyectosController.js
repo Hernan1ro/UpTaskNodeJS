@@ -32,8 +32,7 @@ exports.nuevoProyecto = async (req, res) => {
     //No hay errores
     //Insertar en la BD
     try {
-      const url = slug(nombre).toLowerCase();
-      const proyecto = await Proyectos.create({ nombre, url });
+      const proyecto = await Proyectos.create({ nombre });
       res.redirect("/");
     } catch (err) {
       console.log(err);
