@@ -12,7 +12,7 @@ exports.formularioProyecto = (req, res) => {
   });
 };
 
-exports.nuevoProyecto = (req, res) => {
+exports.nuevoProyecto = async (req, res) => {
   // Enviar a la consola lo que el usuario escriba
 
   // Validar lo que se tenga en el input
@@ -30,10 +30,11 @@ exports.nuevoProyecto = (req, res) => {
   } else {
     //No hay errores
     //Insertar en la BD
-    Proyectos.create({ nombre })
-      .then(() => {
-        console.log("Insertado correctamente");
-      })
-      .catch((err) => console.log(err));
+    try {
+      const proyecto = await Proyectos.create({ nombre });
+      res.redirect("/");
+    } catch (err) {
+      console.log(err);
+    }
   }
 };
